@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="bazaDataSet" targetNamespace="http://tempuri.org/bazaDataSet.xsd" xmlns:mstns="http://tempuri.org/bazaDataSet.xsd" xmlns="http://tempuri.org/bazaDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="bazaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="bazaConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.kursova4.Properties.Settings.GlobalReference.Default.bazaConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="pacientTableAdapter" GeneratorDataComponentClassName="pacientTableAdapter" Name="pacient" UserDataComponentName="pacientTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bazaConnectionString (Settings)" DbObjectName="baza.dbo.pacient" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT fam, name, date, vrem, spec FROM dbo.pacient</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="fam" DataSetColumn="fam" />
+              <Mapping SourceColumn="name" DataSetColumn="name" />
+              <Mapping SourceColumn="date" DataSetColumn="date" />
+              <Mapping SourceColumn="vrem" DataSetColumn="vrem" />
+              <Mapping SourceColumn="spec" DataSetColumn="spec" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="bazaDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="bazaDataSet" msprop:Generator_UserDSName="bazaDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="pacient" msprop:Generator_TableClassName="pacientDataTable" msprop:Generator_TableVarName="tablepacient" msprop:Generator_TablePropName="pacient" msprop:Generator_RowDeletingName="pacientRowDeleting" msprop:Generator_RowChangingName="pacientRowChanging" msprop:Generator_RowEvHandlerName="pacientRowChangeEventHandler" msprop:Generator_RowDeletedName="pacientRowDeleted" msprop:Generator_UserTableName="pacient" msprop:Generator_RowChangedName="pacientRowChanged" msprop:Generator_RowEvArgName="pacientRowChangeEvent" msprop:Generator_RowClassName="pacientRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="fam" msprop:Generator_ColumnVarNameInTable="columnfam" msprop:Generator_ColumnPropNameInRow="fam" msprop:Generator_ColumnPropNameInTable="famColumn" msprop:Generator_UserColumnName="fam">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="date" msprop:Generator_ColumnVarNameInTable="columndate" msprop:Generator_ColumnPropNameInRow="date" msprop:Generator_ColumnPropNameInTable="dateColumn" msprop:Generator_UserColumnName="date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="vrem" msprop:Generator_ColumnVarNameInTable="columnvrem" msprop:Generator_ColumnPropNameInRow="vrem" msprop:Generator_ColumnPropNameInTable="vremColumn" msprop:Generator_UserColumnName="vrem" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="spec" msprop:Generator_ColumnVarNameInTable="columnspec" msprop:Generator_ColumnPropNameInRow="spec" msprop:Generator_ColumnPropNameInTable="specColumn" msprop:Generator_UserColumnName="spec" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
